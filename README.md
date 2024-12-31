@@ -1,6 +1,8 @@
 # Nuxt Minimal Starter for the Internet Computer
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more about nuxt.
+
+A more in-depth explanation will be published next week on IcAcademy. Happy new Year!
 
 ## Setup
 
