@@ -29,7 +29,12 @@ actor {
   };
 
   // get all push ups
-  public shared func getPushUps() : async [(Nat, PushUp)] {
+  public query func getPushUps() : async [(Nat, PushUp)] {
     Map.toArray(map);
+  };
+
+  // get pushUps count
+  public query func getPushUpCount() : async Nat {
+    counter;
   };
 };

@@ -1,4 +1,4 @@
-# Nuxt Minimal Starter
+# Nuxt Minimal Starter for the Internet Computer
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -8,16 +8,7 @@ Make sure to install dependencies:
 
 ```bash
 # npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm install 
 ```
 
 ## Development Server
@@ -27,49 +18,31 @@ Start the development server on `http://localhost:3000`:
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Builds
 
-Build the application for production:
+Build the application for production and playground:
 
 ```bash
-# npm
-npm run build
+# IC mainnet
+npm run deploy-ic
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# IC playground
+npm run deploy-playground
 ```
 
-Locally preview production build:
+## CLI commands
 
 ```bash
-# npm
-npm run preview
+# add some demo data, you can also use Candid UI for that
+dfx canister call backend addPushUp '("Roland",20)'
+dfx canister call backend addPushUp '("Peter",35)'
+dfx canister call backend addPushUp '("Susi",10)'
 
-# pnpm
-pnpm preview
+# get the data
+dfx canister call backend getPushUps
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
+# get the count
+dfx canister call backend getPushUpCount
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

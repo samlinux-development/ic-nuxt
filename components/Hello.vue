@@ -1,22 +1,35 @@
-<script setup>
+<script setup lang="ts">
+import { ref } from 'vue'
+
 defineProps(['title'])
-import { ref } from 'vue';
 
-// Reactive variables
-const count = ref(0);
+const pushUpCounts = ref<boolean>(0);
+const isloading = ref(true);
 
-// Function
-function increment() {
-  count.value++;
-}
+const replaceCount = (str: string, count: number) => {
+  return str.replace('__count__', count.toString());
+};
+
+onMounted(async () => {
+  try {
+    const { $getActor } = useNuxtApp();
+    const actor = $getActor();
+    const result = await actor.getPushUpCount();
+
+    pushUpCounts.value = result;
+    isloading.value = false;
+  } catch (error) {
+    console.error("Error fetching push-ups:", error);
+    // Handle the error gracefully, e.g., display an error message to the user
+  }
+});
 
 </script>
 
 <template>
   <div>
     <h1> {{ title }}</h1>
-    <button @click="increment">Increment</button>
-    <p>Count: {{ count }}</p>
+    <div>{{ replaceCount($translate('greetings.hello'),pushUpCounts) }} </div>
   </div>
 </template>
 

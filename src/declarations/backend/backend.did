@@ -1,0 +1,15 @@
+type Time = int;
+type PushUp = 
+ record {
+   count: nat;
+   date: Time;
+   user: text;
+ };
+service : {
+  addPushUp: (text, nat) -> (text);
+  getPushUpCount: () -> (nat) query;
+  getPushUps: () -> (vec record {
+                           nat;
+                           PushUp;
+                         }) query;
+}

@@ -1,5 +1,9 @@
+<script setup>
+
+</script>
 <template>
   <div>
-    <Hello title="Hello Roland"/>
+    <Hello title="Hello Internet Computer"/>
+    <PushUps />
   </div>
 </template>
