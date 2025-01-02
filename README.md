@@ -9,7 +9,13 @@ A more in-depth explanation will be published next week on IcAcademy. Happy new 
 Make sure to install dependencies:
 
 ```bash
-# npm
+# clone the repro
+gh repo clone samlinux-development/ic-nuxt
+
+# change into the directory
+cd ic-nuxt
+
+# install dependencies 
 npm install 
 ```
 
@@ -18,7 +24,13 @@ npm install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
+# start local replica in terminal if not running (I prefer to use a separate terminal)
+dfx start
+
+# install backend canister for local development
+dfx deploy backend
+
+# start local development server
 npm run dev
 ```
 
