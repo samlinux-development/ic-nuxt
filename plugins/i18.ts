@@ -1,13 +1,26 @@
 import { defineNuxtPlugin } from '#app';
 
 export default defineNuxtPlugin((nuxtApp) => {
-  console.log('Hello from the plugin!');
 
   const translate = (key: string): string => {
 
     const translations: { [key: string]: string } = {
-      'greetings.hello': 'Hello, Roland, you did __count__ pushUps!',
-      'greetings.hello2': 'Hello, Pusher!',
+      'index.title': 'Push-Up Counter',
+      'index.hello': 'Hello, Dev! So far, there have been __count__ pushUps push-ups completed. Let’s add yours to the count!',
+      'pushUps.title': 'Add new Push-Up',
+      'pushUps.name': 'Name',
+      'pushUps.count': 'Push ups performed',
+      'pushUps.addBtn': 'Add Push-Up',
+      'pushUps.loading': 'storing push-up...',
+      'pushUps.list-title': 'Latest Push-Ups',
+      'pushUps.list-empty': 'No push-ups stored yet.',
+      'pushUps.list-loading': 'loading push-ups...',
+      'pushUps.by': 'by',
+      'pushUps.at': 'at',
+      'about.title': 'About this example',
+      'about.info': 'This example demonstrates how to use Nuxt.js with the IC SDK. It stores push-ups on the Internet Computer and displays them in a list. More information will be added soon.',
+      'about.github': 'View on GitHub'
+          
     };
     return translations[key] || key;
   };

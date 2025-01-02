@@ -25,3 +25,6 @@ logs
 
 .mops
 .dfx
+
+helper.md
+canister_ids.json

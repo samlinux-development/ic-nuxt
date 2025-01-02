@@ -11,7 +11,11 @@ const network = process.env.DFX_NETWORK || 'local';
 const envPath = path.join(__dirname, '..', '.env');
 
 // Path to the JSON file dfx generates
-const canisterIdsPath = path.join(__dirname, '..', `.dfx/${network}/canister_ids.json`);
+let canisterIdsPath = path.join(__dirname, '..', `.dfx/${network}/canister_ids.json`);
+if(network == 'ic'){
+  canisterIdsPath = path.join(__dirname, '../', `canister_ids.json`);
+}
+
 const canisterIds = JSON.parse(fs.readFileSync(canisterIdsPath, 'utf-8'));
 
 // The name of the canister as defined in dfx.json

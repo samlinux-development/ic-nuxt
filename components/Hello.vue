@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-defineProps(['title'])
-
 const pushUpCounts = ref<boolean>(0);
 const isloading = ref(true);
 
@@ -28,8 +26,8 @@ onMounted(async () => {
 
 <template>
   <div>
-    <h1> {{ title }}</h1>
-    <div>{{ replaceCount($translate('greetings.hello'),pushUpCounts) }} </div>
+    <h1>{{$translate('index.title')}}</h1>
+    <div>{{ replaceCount($translate('index.hello'),pushUpCounts) }} </div>
   </div>
 </template>
 

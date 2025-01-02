@@ -3,10 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "deploy-ic": "DFX_NETWORK=ic npm run extract-id  && nuxt generate && dfx deploy --network=ic",
-    "deploy-playground": "DFX_NETWORK=playground npm run extract-id  && nuxt generate && dfx deploy --network=playground",
+    "deploy-ic": "DFX_NETWORK=ic npm run extract-id  && nuxt generate && dfx deploy --ic",
+    "deploy-playground": "DFX_NETWORK=playground npm run extract-id && nuxt generate && dfx deploy --playground",
     "deploy-local": "DFX_NETWORK=local npm run extract-id && nuxt generate && dfx deploy",
-
     "build": "nuxt generate",
     "dev": "DFX_NETWORK=local npm run extract-id  && nuxt dev",
     "generate": "nuxt generate",

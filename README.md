@@ -4,6 +4,9 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 
 A more in-depth explanation will be published next week on IcAcademy. Happy new Year!
 
+## Running the project
+Here you can find the [live demo](https://guxxd-cyaaa-aaaai-aq34a-cai.icp0.io/).
+
 ## Setup
 
 Make sure to install dependencies:
