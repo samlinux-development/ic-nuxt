@@ -6,7 +6,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
     const translations: { [key: string]: string } = {
       'index.title': 'Push-Up Counter',
-      'index.hello': 'Hello, Dev! So far, there have been __count__ pushUps push-ups completed. Let’s add yours to the count!',
+      'index.hello': 'Hello, Dev! So far, there have been __count__ push-ups completed. Let’s add yours to the count!',
       'index.totalPushUps': 'Awesome! We’ve crushed a total of __totalPushUps__ push-ups so far. Keep up the great work! 💪',
       'pushUps.title': 'Add new Push-Up',
       'pushUps.name': 'Name',
