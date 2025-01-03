@@ -41,9 +41,20 @@ const formatDate = (nanoseconds: number | bigint): string => {
     <ol v-else class="pushup-list">
       <li v-for="pushUp in pushUps" :key="pushUp.id" class="pushup-item">
         <div class="pushup-details">
+    
           <span class="pushup-count">{{ pushUp.count }} {{ $translate ('pushUps.count') }}</span>
           <span class="pushup-user">{{ $translate ('pushUps.by') }} {{ pushUp.user }}</span>
           <span class="pushup-date">{{ $translate ('pushUps.at') }} {{ formatDate(pushUp.date) }}</span>
+          
+          <div v-if="pushUp.executions && pushUp.executions.length > 0" class="execution-details">
+            <h3>{{ $translate('pushUps.executionDetails') }}</h3>
+            <ul>
+              <li v-for="(execution, index) in pushUp.executions" :key="index">
+               {{ Number(execution.count) }} x {{ Number(execution.repetition) }} {{ $translate('pushUps.repetition') }}
+              </li>
+            </ul>
+          </div>
+
         </div>
       </li>
     </ol>
@@ -86,6 +97,28 @@ const formatDate = (nanoseconds: number | bigint): string => {
 .pushup-date {
   font-size: 0.9rem;
   color: #666;
+}
+.execution-details {
+  margin-top: 0.5rem;
+}
+
+.execution-details h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.execution-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 0.25rem;
+}
+
+.execution-details li {
+  font-size: 0.9rem;
+  color: #333;
+  margin-left: 0.5rem;
 }
 </style>
 

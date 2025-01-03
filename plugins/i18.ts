@@ -7,9 +7,11 @@ export default defineNuxtPlugin((nuxtApp) => {
     const translations: { [key: string]: string } = {
       'index.title': 'Push-Up Counter',
       'index.hello': 'Hello, Dev! So far, there have been __count__ pushUps push-ups completed. Let’s add yours to the count!',
+      'index.totalPushUps': 'Awesome! We’ve crushed a total of __totalPushUps__ push-ups so far. Keep up the great work! 💪',
       'pushUps.title': 'Add new Push-Up',
       'pushUps.name': 'Name',
       'pushUps.count': 'Push ups performed',
+      'pushUps.count2': 'Count',
       'pushUps.addBtn': 'Add Push-Up',
       'pushUps.loading': 'storing push-up...',
       'pushUps.list-title': 'Latest Push-Ups',
@@ -17,6 +19,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       'pushUps.list-loading': 'loading push-ups...',
       'pushUps.by': 'by',
       'pushUps.at': 'at',
+      'pushUps.repetition': 'Reps',
+      'pushUps.executionDetails':'Details',
+      'pushUps.totalPushUpsPerExercise':'Total push-ups per exercise',
       'about.title': 'About this example',
       'about.info': 'This example demonstrates how to use Nuxt.js with the IC SDK. It stores push-ups on the Internet Computer and displays them in a list. More information will be added soon.',
       'about.github': 'View on GitHub'

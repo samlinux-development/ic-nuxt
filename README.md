@@ -62,4 +62,8 @@ dfx canister call backend getPushUps
 
 # get the count
 dfx canister call backend getPushUpCount
+
+# get the total
+dfx canister call backend getTotalPushUpCount
+
 ```

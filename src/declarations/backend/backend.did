@@ -3,13 +3,22 @@ type PushUp =
  record {
    count: nat;
    date: Time;
+   executions: vec Attempt;
    user: text;
  };
-service : {
-  addPushUp: (text, nat) -> (text);
-  getPushUpCount: () -> (nat) query;
-  getPushUps: () -> (vec record {
-                           nat;
-                           PushUp;
-                         }) query;
-}
+type Main = 
+ service {
+   addPushUp: (text, nat, vec Attempt) -> (text);
+   getPushUpCount: () -> (nat) query;
+   getPushUps: () -> (vec record {
+                            nat;
+                            PushUp;
+                          }) query;
+   getTotalPushUpCount: () -> (nat) query;
+ };
+type Attempt = 
+ record {
+   count: nat;
+   repetition: nat;
+ };
+service : () -> Main

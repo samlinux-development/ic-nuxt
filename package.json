@@ -6,7 +6,7 @@
     "deploy-ic": "DFX_NETWORK=ic npm run extract-id  && nuxt generate && dfx deploy --ic",
     "deploy-playground": "DFX_NETWORK=playground npm run extract-id && nuxt generate && dfx deploy --playground",
     "deploy-local": "DFX_NETWORK=local npm run extract-id && nuxt generate && dfx deploy",
-    "build": "nuxt generate",
+    "build": "npm run extract-id && nuxt generate",
     "dev": "DFX_NETWORK=local npm run extract-id  && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -15,12 +15,14 @@
   },
   "dependencies": {
     "@dfinity/agent": "^2.2.0",
+    "@nuxt/icon": "^1.10.3",
     "@nuxt/types": "^2.18.1",
     "nuxt": "^3.15.0",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@iconify-json/fa6-regular": "^1.2.3",
     "nuxi": "^3.17.2"
   }
 }

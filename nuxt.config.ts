@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   ssr: false,
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true
+    }
+  },
 
   plugins: [
     '~/plugins/i18.ts',
@@ -14,5 +20,7 @@ export default defineNuxtConfig({
       backendCanisterId: process.env.NUXT_PUBLIC_CANISTER_ID_BACKEND,
       network: process.env.NUXT_PUBLIC_DFX_NETWORK
     }
-  }
+  },
+
+  modules: ['@nuxt/icon']
 })
