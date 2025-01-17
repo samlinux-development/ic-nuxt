@@ -1,0 +1,22 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run extract-id && nuxt generate",
+    "dev": "rm .env && dfx canister create backend && DFX_NETWORK=local npm run extract-id && nuxt dev",
+    "deploy-playground": "rm .env && dfx canister create --all --playground && DFX_NETWORK=playground && dfx deploy --playground",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "extract-id": "node scripts/extract-canister-id.js",
+    "rm-env": "rm .env"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.2.0",
+    "@nuxt/ui": "^3.0.0-alpha.11",
+    "nuxt": "^3.15.2",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}

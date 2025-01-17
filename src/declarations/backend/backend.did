@@ -1,0 +1,4 @@
+service : {
+  getLastName: () -> (text) query;
+  setLastName: (text) -> (bool);
+}
