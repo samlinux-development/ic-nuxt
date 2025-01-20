@@ -2,7 +2,7 @@
 import { useNuxtApp } from '#app'
 import type { _SERVICE } from '../declarations/backend/backend.did.d';
 
-const { $getActor } = useNuxtApp() as any;
+const { $getActor } = useNuxtApp() as _SERVICE;
 const isLoading: Ref<boolean> = ref(false);
 const inputValue: Ref<string> = ref('');
 const result: Ref<string> = ref('');
