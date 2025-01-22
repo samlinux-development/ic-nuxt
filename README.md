@@ -8,6 +8,9 @@ This template is intended to make it easier for you to get started with developm
 
 To clone and use the Github repository for your own purpose following the commands below. 
 
+Read the accompanying article on [IcAcademy](https://blog.icacademy.at/blog/ic-nuxt-starter).
+
+
 **Note** to get a clean git repository. A tool called “digit” is used. Make sure you have it installed. If you haven't installed it yet, you can do so using the following command.
 
 ```bash
